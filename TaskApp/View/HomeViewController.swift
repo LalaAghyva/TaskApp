@@ -32,8 +32,7 @@ final class HomeViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented") }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -133,7 +132,11 @@ final class HomeViewController: UIViewController {
     private func updateTableHeaderLayout() {
         guard let header = tableView.tableHeaderView as? CarouselHeaderView else { return }
         let width = tableView.bounds.width
-        let height: CGFloat = 276   // 240 image + pageControl + paddings
+        
+        let imageHeight: CGFloat = 240
+        let padding: CGFloat = 8
+        let pageControl: CGFloat = 20
+        let height: CGFloat = imageHeight + padding * 2 + pageControl  // 240 image + pageControl + paddings
 
         header.frame = CGRect(
             x: .zero,
@@ -177,12 +180,12 @@ final class HomeViewController: UIViewController {
 
     @objc private func didTapFAB() {
         let data = viewModel.prepareDataForSheet()
-                
+        
         let viewController = StatsSheetViewController(
-             selectedText: data.selected,
-             countsText: data.counts,
-             topCharsText: data.topChars
-         )
+            selectedText: data.selected,
+            countsText: data.counts,
+            topCharsText: data.topChars
+        )
         present(viewController, animated: true)
     }
 }
