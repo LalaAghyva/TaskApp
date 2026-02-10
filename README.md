@@ -2,8 +2,8 @@ This repository contains two separate implementations of the same UI task.
 
 ## Branches
 
-- sui — SwiftUI version
-- uikit — UIKit version
+- **sui** — SwiftUI + MVVM
+- **uikit** — UIKit + MVVM
 
 ## Requirements
 
@@ -28,11 +28,6 @@ Checkout a branch and run the project.
 
 This repository contains **two separate implementations of the same task**.
 
-## Branches
-
-- **sui** — SwiftUI + MVVM
-- **uikit** — UIKit + MVVM
-
 ## Features
 
 - Image carousel with page-based content switching  
@@ -41,14 +36,22 @@ This repository contains **two separate implementations of the same task**.
 - Floating Action Button with bottom sheet statistics  
 - No third-party libraries
 
-## Run
+## Environment
 
-1. Checkout the desired branch  
-2. Build & Run
+- Xcode 16.2
+- iOS 16.6+
+- iPhone 15 Pro Simulator
 
 ## Known improvement + Best practice approach
+
 - During the implementation, some UI-related values (such as paddings, sizes, corner radii) and user-facing strings are currently defined inline as magic numbers or hard-coded literals.
 - Due to the limited scope and time constraints of this task, these values were kept close to their usage for faster iteration and readability
 
+## Testing
+
+Automated tests were not implemented due to time constraints for this task.
+In a production-ready version, the following tests would be added:
+- Unit tests for filtering and statistics logic
+- UI tests for core user flows
 
 
