@@ -2,16 +2,16 @@ This repository contains two separate implementations of the same UI task.
 
 ## Branches
 
-- swiftui-implementation — SwiftUI version
-- uikit-implementation — UIKit version
+- sui — SwiftUI version
+- uikit — UIKit version
 
 ## Requirements
 
-Images carousel: when user swipe left or right, list content should change accordingly. The images carousel can handle any number of images.
-The list: when user scrolls up the whole page should scroll with it. The list can handle any number of items. 
+- Images carousel: when user swipe left or right, list content should change accordingly. The images carousel can handle any number of images.
+- The list: when user scrolls up the whole page should scroll with it. The list can handle any number of items. 
 P.S. images and list content can be local or loaded from the internet.
-Search: Search bar should pin top when it reaches screen top. When user enter text, it should filter the labels in the list based on the user input.
-Floating action button should show a nice bottom sheet dialog that contain a small statistic that consist of the count of items for each page and show the top 3 occurrence character in the list. i.e
+- Search: Search bar should pin top when it reaches screen top. When user enter text, it should filter the labels in the list based on the user input.
+- Floating action button should show a nice bottom sheet dialog that contain a small statistic that consist of the count of items for each page and show the top 3 occurrence character in the list. i.e
 listOf(“apple”, “banana” , “orange”,“blueberry”)
 List 1 (4 items)
 a = 5
@@ -30,8 +30,8 @@ This repository contains **two separate implementations of the same task**.
 
 ## Branches
 
-- **swiftui-implementation** — SwiftUI + MVVM
-- **uikit-implementation** — UIKit + MVVM
+- **sui** — SwiftUI + MVVM
+- **uikit** — UIKit + MVVM
 
 ## Features
 
@@ -45,4 +45,10 @@ This repository contains **two separate implementations of the same task**.
 
 1. Checkout the desired branch  
 2. Build & Run
+
+## Known improvement + Best practice approach
+- During the implementation, some UI-related values (such as paddings, sizes, corner radii) and user-facing strings are currently defined inline as magic numbers or hard-coded literals.
+- Due to the limited scope and time constraints of this task, these values were kept close to their usage for faster iteration and readability
+
+
 

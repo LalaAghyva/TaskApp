@@ -10,22 +10,9 @@
 		2739E8472F3B0A2300F47D3E /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2739E8592F3B0A2500F47D3E /* Exceptions for "TaskApp" folder in "TaskApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 2739E8462F3B0A2300F47D3E /* TaskApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2739E8492F3B0A2300F47D3E /* TaskApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2739E8592F3B0A2500F47D3E /* Exceptions for "TaskApp" folder in "TaskApp" target */,
-			);
 			path = TaskApp;
 			sourceTree = "<group>";
 		};
