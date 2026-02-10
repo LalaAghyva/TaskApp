@@ -20,6 +20,7 @@ final class HomeViewModel {
     }
     
     func load() async {
+        //
         do {
             pages = try await apiClient.fetchHomeData()
         } catch {
