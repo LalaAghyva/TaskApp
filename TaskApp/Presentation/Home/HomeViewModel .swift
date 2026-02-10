@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 final class HomeViewModel: ObservableObject {
 
     @Published private(set) var pages: [PageData] = []
@@ -21,8 +20,13 @@ final class HomeViewModel: ObservableObject {
     }
     
     func load() async {
+        //Loading can be add
         do {
-            pages = try await apiClient.fetchHomeData()
+            let result = try await apiClient.fetchHomeData()
+            
+            await MainActor.run {
+                self.pages = result
+            }
         } catch {
             print("Failed to load data")
         }

@@ -10,11 +10,13 @@ import SwiftUI
 struct HomeView: View {
     
     // MARK: - State
-    @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var viewModel: HomeViewModel
     @State private var showSheet = false
     
     // MARK: - Init
-    init() {
+    init(viewModel: HomeViewModel = HomeViewModel()) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+
         UIPageControl.appearance().currentPageIndicatorTintColor = .systemBlue
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.systemGray4
     }
@@ -97,5 +99,6 @@ private extension HomeView {
 }
 
 #Preview {
-    HomeView()
-}
+    HomeView(
+        viewModel: HomeViewModel()
+    )}
